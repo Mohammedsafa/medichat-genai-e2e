@@ -70,7 +70,7 @@ def chat():
     print(input)
     response = rag_chain.invoke({"input": msg})
     print("Response : ", response["answer"])
-    return jsonify({"answer": response["answer"]})
+    return str(response["answer"])
 
 
 if __name__ == "__main__":
